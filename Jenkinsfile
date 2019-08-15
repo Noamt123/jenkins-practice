@@ -9,7 +9,7 @@ pipeline {
     stage('Upload to AWS') {
       steps {
         withAWS(region:'us-east-1',credentials:'bear1') {
-          s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'notes.txt', bucket:'poopy-crap')
+          s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'index1.html', bucket:'poopy-crap')
         }
       }
     }
